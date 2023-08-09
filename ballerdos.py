@@ -23,7 +23,7 @@ $$$$$$$  |\$$$$$$$ |$$ |$$ |\$$$$$$$\ $$ |      \$$$$$$$ |\$$$$$$  |$$$$$$$  |
     """)
     target_ip = input("Enter target IP: ")
     packet_count = int(input("Enter number of packets per 100 milliseconds: "))
-    interval = 0.1  # Sending packets every 100 milliseconds
+    interval = 0.1 
 
     try:
         send_packets(target_ip, packet_count, interval)
