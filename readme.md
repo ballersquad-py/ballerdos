@@ -1,4 +1,4 @@
-Simple ddos tool created by me.
+#Simple ddos tool created by me.
 
 
 - This tool is for educational purposes only. Use responsibly and only on networks you own or have permission to test.
