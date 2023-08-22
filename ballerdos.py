@@ -1,7 +1,7 @@
 import time
 import scapy.all as scapy
 
-def send_packets(target_ip, packet_count, interval):
+def packet_sender(target_ip, packet_count, interval):
     for _ in range(packet_count):
         packet = scapy.IP(dst=target_ip)/scapy.ICMP()
         scapy.send(packet, verbose=False)
