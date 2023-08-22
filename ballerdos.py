@@ -1,7 +1,7 @@
 import time
 import scapy.all as scapy
 
-def packets(target_ip, packet_count, interval):
+def packets(ip, packetss, persec):
     for _ in range(packet_count):
         packet = scapy.IP(dst=target_ip)/scapy.ICMP()
         scapy.send(packet, verbose=False)
@@ -22,7 +22,7 @@ $$$$$$$  |\$$$$$$$ |$$ |$$ |\$$$$$$$\ $$ |      \$$$$$$$ |\$$$$$$  |$$$$$$$  |
                                   
     """)
     ip = input("Enter target IP: ")
-    packets = int(input("Enter number of packets: "))
+    packetss = int(input("Enter number of packets: "))
     persec = 0.1 
 
     try:
