@@ -1,7 +1,7 @@
 import time
 import scapy.all as scapy
 
-def packet_sender(target_ip, packet_count, interval):
+def packets(target_ip, packet_count, interval):
     for _ in range(packet_count):
         packet = scapy.IP(dst=target_ip)/scapy.ICMP()
         scapy.send(packet, verbose=False)
@@ -21,12 +21,12 @@ $$$$$$$  |\$$$$$$$ |$$ |$$ |\$$$$$$$\ $$ |      \$$$$$$$ |\$$$$$$  |$$$$$$$  |
 \_______/  \_______|\__|\__| \_______|\__|       \_______| \______/ \_______/ 
                                   
     """)
-    target_ip = input("Enter target IP: ")
-    packet_count = int(input("Enter number of packets: "))
-    interval = 0.1 
+    ip = input("Enter target IP: ")
+    packets = int(input("Enter number of packets: "))
+    persec = 0.1 
 
     try:
-        send_packets(target_ip, packet_count, interval)
+        packets(ip, packets, persec)
     except KeyboardInterrupt:
         print("Tool interrupted.")
 
